@@ -52,6 +52,10 @@ This project will occur over an eight-week duration:
 
 **Week 8**: Polish, dbt docs site, README, Docker Compose packaging, publishing to GitHub and gain traction online (Reddit, Medium posts).
 
+## Deployment -> Installable Application 
+
+Planning on adding a main.py where it will initialize all the requirements for the app to work on anyone else's machines locally. Interactive through the CLI, and maybe through a Streamlit app as a later rendition. 
+
 # References 
 
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
