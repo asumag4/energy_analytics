@@ -59,3 +59,6 @@ Planning on adding a main.py where it will initialize all the requirements for t
 # References 
 
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
+
+### Progress Notes: 
+fix `eia_fetch_all()` func
