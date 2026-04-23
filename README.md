@@ -61,4 +61,7 @@ Planning on adding a main.py where it will initialize all the requirements for t
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
 
 ### Progress Notes: 
-fix `eia_fetch_all()` func
+- Load data into "petroleum/sum/snd", "petroleum/sum/sndw", "natural-gas/prod/ngpl", "natural-gas/prod/sum"
+- Will have to check if table outputs are the same to "petroleum/crd/crpdn" and will have to assign schemas accordingly
+
+- Should look into silver layer for next steps (should aim to do CI/CD to integrate other data platforms)
