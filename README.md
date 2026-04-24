@@ -61,7 +61,7 @@ Planning on adding a main.py where it will initialize all the requirements for t
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
 
 ### Progress Notes: 
-- Load data into "petroleum/sum/snd", "petroleum/sum/sndw", "natural-gas/prod/ngpl", "natural-gas/prod/sum"
-- Will have to check if table outputs are the same to "petroleum/crd/crpdn" and will have to assign schemas accordingly
+- Load data: WTI Crude Spot Price (Daily), Natural Gas Spot Price (Henry Hub, daily), Weekly Crude Inventory (US Total Stocks)
+- Will need to look into natural-gas/prod/ngpl, where some values for datetime were of invalid format and could not be transformed, need to address this issue with a function that looks through datetime values and will default to a value
 
-- Should look into silver layer for next steps (should aim to do CI/CD to integrate other data platforms)
+- Need to make functions into one class and create a new obj of the class whenever you want to injest via a route of EIA API call -> call it EIALoader obj
