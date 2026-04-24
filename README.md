@@ -52,6 +52,16 @@ This project will occur over an eight-week duration:
 
 **Week 8**: Polish, dbt docs site, README, Docker Compose packaging, publishing to GitHub and gain traction online (Reddit, Medium posts).
 
+## Deployment -> Installable Application 
+
+Planning on adding a main.py where it will initialize all the requirements for the app to work on anyone else's machines locally. Interactive through the CLI, and maybe through a Streamlit app as a later rendition. 
+
 # References 
 
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
+
+### Progress Notes: 
+- Load data: WTI Crude Spot Price (Daily), Natural Gas Spot Price (Henry Hub, daily), Weekly Crude Inventory (US Total Stocks)
+- Will need to look into natural-gas/prod/ngpl, where some values for datetime were of invalid format and could not be transformed, need to address this issue with a function that looks through datetime values and will default to a value
+
+- Need to make functions into one class and create a new obj of the class whenever you want to injest via a route of EIA API call -> call it EIALoader obj
