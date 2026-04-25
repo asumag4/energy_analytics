@@ -65,3 +65,8 @@ https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate l
 - Will need to look into natural-gas/prod/ngpl, where some values for datetime were of invalid format and could not be transformed, need to address this issue with a function that looks through datetime values and will default to a value
 
 - Need to make functions into one class and create a new obj of the class whenever you want to injest via a route of EIA API call -> call it EIALoader obj
+
+### Modelling: 
+
+To bring in best-in-class modelling techniques, refrencing academic papers and published Kaggle models will be the most efficient way to adopt best-practices and academic standard modelling techniques. 
+
