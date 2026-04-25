@@ -27,31 +27,6 @@ This project is a personal endeavour to learn and research energy-market relevan
 
 * **Plotly Dash** (Python, local, free) — much better for a data engineering project than Tableau since it stays fully in-code and you can embed model outputs directly. 
 
-## Schedule
-**Project Start:** April 3, 2026
-
-**Project End (Est.):** June 5
-
-----
-
-This project will occur over an eight-week duration: 
-
-**Week 1**: Environment setup (Postgres, dbt init, Airflow/scripts). Ingest RRC + EIA raw files. Audit/master log table.
-
-**Week 2**: Ingest EPA GHGRP. Staging layer + data profiling/EDA. Operator name reconciliation. Document data quality findings.
-
-**Week 3**: Intermediate dbt models. Dim tables (well, operator, formation, geography). dbt tests written in parallel.
-
-**Week 4**: Fact tables + data mart. Economics mart (breakeven, LOE/BOE). Finalize dbt documentation.
-
-**Week 5**: Feature engineering + model selection. Decline curve fitting, EUR distribution, anomaly detection. MLflow tracking.
-
-**Week 6**: Model validation, retraining pipeline on data refresh cadence. Finalize advanced analytics narrative.
-
-**Week 7**: Plotly Dash dashboard build. Map view, operator benchmarking, model output overlays.
-
-**Week 8**: Polish, dbt docs site, README, Docker Compose packaging, publishing to GitHub and gain traction online (Reddit, Medium posts).
-
 ## Deployment -> Installable Application 
 
 Planning on adding a main.py where it will initialize all the requirements for the app to work on anyone else's machines locally. Interactive through the CLI, and maybe through a Streamlit app as a later rendition. 
@@ -59,6 +34,12 @@ Planning on adding a main.py where it will initialize all the requirements for t
 # References 
 
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
+
+### Next Steps: 
+
+Pivoting off of integrating multiple data-sources, instead will focus on building a prototype with EIA data. And initial data modelling and ML application.
+
+- Build out DBT model for ML and for 
 
 ### Progress Notes: 
 - Load data: WTI Crude Spot Price (Daily), Natural Gas Spot Price (Henry Hub, daily), Weekly Crude Inventory (US Total Stocks)
