@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: v_ml_drilling_set
+    description: "View model that builds grabs the columns used for drilling prediction. Referencing columns similarly used by antoniodagnino"

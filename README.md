@@ -35,6 +35,8 @@ Planning on adding a main.py where it will initialize all the requirements for t
 
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
 
+https://github.com/antoniodagnino/Oil-Gas-Drilling-Activity-Prediction.git || Oil-Gas-Drilling-Activity-Prediction
+
 ### Next Steps: 
 
 Pivoting off of integrating multiple data-sources, instead will focus on building a prototype with EIA data. And initial data modelling and ML application.

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: v_total_energy_pivot
+    description: "View model that unpivots msn data (Mnemonic series name) so that it may be used"

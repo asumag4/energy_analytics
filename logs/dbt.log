@@ -1,0 +1,90 @@
+[0m21:20:41.519573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67b1125b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67b2f17f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67b039c5c0>]}
+
+
+============================== 21:20:41.553343 | 045b226d-f0ea-49a7-85b5-78d99f17ed05 ==============================
+[0m21:20:41.553343 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:20:41.553879 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'quiet': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'profiles_dir': '/home/askal2/.dbt', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'debug': 'False', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'write_json': 'True', 'warn_error': 'None', 'invocation_command': 'dbt init energy_analytics', 'log_path': 'logs'}
+[0m21:20:41.610309 [info ] [MainThread]: Creating dbt configuration folder at /home/askal2/.dbt
+[0m21:20:41.611674 [debug] [MainThread]: Starter project path: /home/askal2/Documents/Development/projects/energy-dbt-ai/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m21:20:41.613323 [info ] [MainThread]: 
+Your new dbt project "energy_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:20:41.613653 [info ] [MainThread]: Setting up your profile.
+[0m21:27:22.724426 [info ] [MainThread]: Profile energy_analytics written to /home/askal2/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:27:22.725570 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 401.2542, "process_in_blocks": "216", "process_kernel_time": 0.087533, "process_mem_max_rss": "124904", "process_out_blocks": "1720", "process_user_time": 1.337608}
+[0m21:27:22.726102 [debug] [MainThread]: Command `dbt init` succeeded at 21:27:22.725999 after 401.25 seconds
+[0m21:27:22.726442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67b04c7620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67b0e2ab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67b039c5c0>]}
+[0m21:27:22.726801 [debug] [MainThread]: Flushing usage events
+[0m21:27:23.352727 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:27:36.834060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff260e2db50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff260539700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff260e2cc80>]}
+
+
+============================== 21:27:36.839770 | 58ef93bd-f7ae-4237-862c-541742756a49 ==============================
+[0m21:27:36.839770 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:27:36.840902 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'introspect': 'True', 'use_colors': 'True', 'empty': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'write_json': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'printer_width': '80', 'profiles_dir': '/home/askal2/.dbt', 'warn_error': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'partial_parse': 'True', 'fail_fast': 'False'}
+[0m21:27:36.857416 [info ] [MainThread]: dbt version: 1.11.8
+[0m21:27:36.858554 [info ] [MainThread]: python version: 3.12.13
+[0m21:27:36.859959 [info ] [MainThread]: python path: /home/askal2/Documents/Development/projects/energy-dbt-ai/.venv/bin/python3
+[0m21:27:36.860772 [info ] [MainThread]: os info: Linux-6.19.12-200.fc43.x86_64-x86_64-with-glibc2.42
+[0m21:27:36.930160 [info ] [MainThread]: Using profiles dir at /home/askal2/.dbt
+[0m21:27:36.930750 [info ] [MainThread]: Using profiles.yml file at /home/askal2/.dbt/profiles.yml
+[0m21:27:36.931089 [info ] [MainThread]: Using dbt_project.yml file at /home/askal2/Documents/Development/projects/energy-dbt-ai/dbt_project.yml
+[0m21:27:36.931792 [info ] [MainThread]: adapter type: postgres
+[0m21:27:36.932513 [info ] [MainThread]: adapter version: 1.10.0
+[0m21:27:36.933091 [info ] [MainThread]: Configuration:
+[0m21:27:36.933391 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:27:36.934105 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m21:27:36.934455 [info ] [MainThread]: Required dependencies:
+[0m21:27:36.934732 [debug] [MainThread]: Executing "git --help"
+[0m21:27:36.936762 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:27:36.937445 [debug] [MainThread]: STDERR: "b''"
+[0m21:27:36.938119 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:27:36.938720 [info ] [MainThread]: Connection:
+[0m21:27:36.939165 [info ] [MainThread]:   host: localhost
+[0m21:27:36.939530 [info ] [MainThread]:   port: 5432
+[0m21:27:36.939817 [info ] [MainThread]:   user: energy_user
+[0m21:27:36.940058 [info ] [MainThread]:   database: og_energy_analytics
+[0m21:27:36.940381 [info ] [MainThread]:   schema: silver
+[0m21:27:36.940711 [info ] [MainThread]:   connect_timeout: 10
+[0m21:27:36.941006 [info ] [MainThread]:   role: None
+[0m21:27:36.941332 [info ] [MainThread]:   search_path: None
+[0m21:27:36.941632 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:27:36.941930 [info ] [MainThread]:   sslmode: None
+[0m21:27:36.942227 [info ] [MainThread]:   sslcert: None
+[0m21:27:36.942539 [info ] [MainThread]:   sslkey: None
+[0m21:27:36.943144 [info ] [MainThread]:   sslrootcert: None
+[0m21:27:36.943565 [info ] [MainThread]:   application_name: dbt
+[0m21:27:36.944019 [info ] [MainThread]:   retries: 1
+[0m21:27:36.944506 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:27:37.025242 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:27:37.067496 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:27:37.067973 [debug] [MainThread]: On debug: select 1 as id
+[0m21:27:37.068266 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:27:37.078766 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m21:27:37.080172 [debug] [MainThread]: On debug: Close
+[0m21:27:37.081080 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:27:37.082873 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:27:37.083702 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/askal2/Documents/Development/projects/energy-dbt-ai/dbt_project.yml> not found
+
+[0m21:27:37.085009 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.3168179, "process_in_blocks": "1008", "process_kernel_time": 0.132736, "process_mem_max_rss": "122876", "process_out_blocks": "512", "process_user_time": 1.686096}
+[0m21:27:37.085503 [debug] [MainThread]: Command `dbt debug` failed at 21:27:37.085414 after 0.32 seconds
+[0m21:27:37.085931 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:27:37.086429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2603ae9f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff25e53d340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff25fac3e30>]}
+[0m21:27:37.087109 [debug] [MainThread]: Flushing usage events
+[0m21:27:37.567581 [debug] [MainThread]: An error was encountered while trying to flush usage events

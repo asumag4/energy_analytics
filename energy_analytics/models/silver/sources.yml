@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: t_crude_inventory
+      - name: t_crude_oil_production
+      - name: t_natural_gas_plants_liquids
+      - name: t_natural_gas_plant_liquids_summary
+      - name: t_petroleum_spot_prices
+      - name: t_supply_and_disposition
+      - name: t_total_energy
+      - name: t_weekly_supply_and_disposition

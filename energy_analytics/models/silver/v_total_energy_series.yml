@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: v_total_energy_series
+    description: "View model that extracts distinct series descriptions from the total energy data"
+    columns:
+      - name: msn
+        description: "The time period for the data point"
+        data_tests:
+          - not_null
+      - name: duoarea
+        description: "The duoarea code for the region"
+      - name: area_name
+        description: "The name of the area or region"
+      - name: product
+        description: "The type of product being measured"
+      - name: value
+        description: "The value of the measurement"
