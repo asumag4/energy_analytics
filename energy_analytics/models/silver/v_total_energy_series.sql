@@ -6,4 +6,5 @@ SELECT
     DISTINCT
         msn
         ,series_description
+        ,unit
 FROM source

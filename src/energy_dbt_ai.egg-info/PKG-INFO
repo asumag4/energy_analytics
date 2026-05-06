@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: energy-dbt-ai
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: dbt-core>=1.11.8
+Requires-Dist: dbt-postgres>=1.10.0
+Requires-Dist: duckdb>=1.5.2
+Requires-Dist: flask>=3.1.3
+Requires-Dist: matplotlib>=3.10.9
+Requires-Dist: mlflow>=1.27.0
+Requires-Dist: pandas>=3.0.2
+Requires-Dist: psycopg2-binary>=2.9.11
+Requires-Dist: pyarrow>=24.0.0
+Requires-Dist: python-dotenv>=1.2.2
+Requires-Dist: requests>=2.33.1
+Requires-Dist: scikit-learn>=1.8.0
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: sqlalchemy>=2.0.49
+Requires-Dist: statsmodels>=0.14.6
+
+# Energy DBT AI Model
+
+This project is a personal endeavour to learn and research energy-market relevant data engineering product. 
+
+## Data Sources
+* Texas RRC
+* EIA
+* EPA GHGRP 
+
+## Stack
+### Ingestion & Orchestration
+
+* **Python** (requests, pandas, httpx) for API pulls and file ingestion
+* **Apache Airflow** (local via Docker) or just scheduled Python scripts to start — don't overcomplicate orchestration early
+* Raw data lands in **PostgreSQL** staging schemas
+
+### Transformation Layer
+
+* **dbt Core** (local, free) — this is the right call. You define your staging → intermediate → mart layers here. Version controlled, tested, documented.
+
+### AI/ML
+
+* **Python**: scikit-learn, XGBoost, PyTorch or LightGBM depending on the use case
+* Optionally: **MLflow** (local) for experiment tracking — adds a lot of credibility to the project
+
+### Analytics / Reporting
+
+* **Plotly Dash** (Python, local, free) — much better for a data engineering project than Tableau since it stays fully in-code and you can embed model outputs directly. 
+
+## Deployment -> Installable Application 
+
+Planning on adding a main.py where it will initialize all the requirements for the app to work on anyone else's machines locally. Interactive through the CLI, and maybe through a Streamlit app as a later rendition. 
+
+# References 
+
+https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
+
+https://github.com/antoniodagnino/Oil-Gas-Drilling-Activity-Prediction.git || Oil-Gas-Drilling-Activity-Prediction
+
+### Next Steps: 
+
+Pivoting off of integrating multiple data-sources, instead will focus on building a prototype with EIA data. And initial data modelling and ML application.
+
+- Build out DBT model for ML and for 
+
+### Progress Notes: 
+- Load data: WTI Crude Spot Price (Daily), Natural Gas Spot Price (Henry Hub, daily), Weekly Crude Inventory (US Total Stocks)
+- Will need to look into natural-gas/prod/ngpl, where some values for datetime were of invalid format and could not be transformed, need to address this issue with a function that looks through datetime values and will default to a value
+
+- Need to make functions into one class and create a new obj of the class whenever you want to injest via a route of EIA API call -> call it EIALoader obj
+
+### Modelling: 
+
+To bring in best-in-class modelling techniques, refrencing academic papers and published Kaggle models will be the most efficient way to adopt best-practices and academic standard modelling techniques. 
+

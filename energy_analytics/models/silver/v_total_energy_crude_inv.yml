@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: v_crude_inventory
+    description: "Transforming t_crude_inventory so that data is formatted as the output simiarly with t_total_energy, for ML dataset"
+    columns:
+      - name: period
+        description: "First day of the month"
+        tests:
+          - not_null
+      - name: msn
+        description: "EIA series identifier"
+        tests:
+          - not_null
+      - name: value
+        description: "Sum of inventory value for the month"
+        tests:
+          - not_null
+      - name: series_description
+        description: "Human readable description of the series"
+      - name: unit
+        description: "Unit of measurement"

@@ -2,7 +2,7 @@
     set ml_drilling_cols = dbt_utils.get_column_values (
         table=ref('v_total_energy_series'),
         column='msn',
-        where="(
+        where="
             series_description LIKE '%Crude Oil Rotary Rigs in Operation%' 
             OR series_description LIKE '%Natural Gas Rotary Rigs in Operation%'
             OR series_description LIKE '%Crude Oil and Natural Gas Rotary Rigs in Operation%'
@@ -18,8 +18,7 @@
             OR series_description LIKE '%Crude Oil Stocks%'
             OR series_description LIKE '%Stock Change%'
             OR series_description LIKE '%Carbon Dioxide%'
-            )
-            AND series_description NOT LIKE '%Total%'"
+            "
     )
     %}
 
