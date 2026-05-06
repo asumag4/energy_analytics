@@ -31,6 +31,14 @@ This project is a personal endeavour to learn and research energy-market relevan
 
 Planning on adding a main.py where it will initialize all the requirements for the app to work on anyone else's machines locally. Interactive through the CLI, and maybe through a Streamlit app as a later rendition. 
 
+## Engineering: uv 
+
+To run jupyter notebooks, make sure to start a kernel through uv: 
+
+`uv run python -m ipykernel install --user --name energy-dbt-ai --display-name "energy-dbt-ai"`
+
+Then select this kernel as the runtime for a jupyter-notebook's executions
+
 # References 
 
 https://www.eia.gov/opendata/documentation.php#Understandingreturneder || Rate limit of 5000 rows in JSON format for EIA API call
@@ -52,4 +60,3 @@ Pivoting off of integrating multiple data-sources, instead will focus on buildin
 ### Modelling: 
 
 To bring in best-in-class modelling techniques, refrencing academic papers and published Kaggle models will be the most efficient way to adopt best-practices and academic standard modelling techniques. 
-
