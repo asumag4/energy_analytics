@@ -41,16 +41,10 @@ class DBLoader():
                 'BOOLEAN' : Boolean,
                 'TIMESTAMP' : DateTime,
             }
+        self.create_postgres_engine()
         return
     
-    def create_postgres_engine(
-            self,
-            user: str, 
-            password: str, 
-            host: str, 
-            port: int, 
-            database: str
-        ) -> create_engine:
+    def create_postgres_engine(self) -> create_engine:
         """
         Create a SQLAlchemy engine for connecting to a PostgreSQL database.
 
@@ -64,6 +58,11 @@ class DBLoader():
         Returns:
         - A SQLAlchemy engine instance
         """
+        user=os.getenv("POSTGRES_USER")
+        password=os.getenv("POSTGRES_PASSWORD")
+        host=os.getenv("POSTGRES_HOST")
+        port=int(os.getenv("POSTGRES_PORT", 5432))
+        database=os.getenv("POSTGRES_DB")
         connection_string = f"postgresql://{user}:{password}@{host}:{port}/{database}"
         self.engine = create_engine(connection_string)
     
@@ -101,7 +100,7 @@ class DBLoader():
         """
 
         # --- Auto-create schema ---
-        self.create_schema_if_not_exists(self.engine, pg_schema)
+        self.create_schema_if_not_exists(pg_schema)
 
         metadata = MetaData(schema=pg_schema)
         inspector = inspect(self.engine)
