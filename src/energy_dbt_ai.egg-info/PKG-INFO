@@ -13,6 +13,7 @@ Requires-Dist: ipykernel>=7.2.0
 Requires-Dist: matplotlib>=3.10.0
 Requires-Dist: mlflow>=2.15.0
 Requires-Dist: pandas>=2.0.0
+Requires-Dist: pmdarima>=2.1.1
 Requires-Dist: psycopg2-binary>=2.9.0
 Requires-Dist: pyarrow>=4.0.0
 Requires-Dist: python-dotenv>=1.0.0
