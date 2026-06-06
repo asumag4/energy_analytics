@@ -86,7 +86,8 @@ class DBLoader():
         relation: duckdb.DuckDBPyRelation, 
         table_name: str, 
         schema: dict, 
-        pg_schema: str = "bronze"
+        pg_schema: str = "bronze",
+        duckdb_conn: duckdb.DuckDBPyConnection = None
         ) -> None: 
         """
         Dynamically create or upsert a PostgreSQL table from a DuckDB relation.
@@ -142,9 +143,12 @@ class DBLoader():
         col_list = ", ".join(f'"{c}"' for c in selected_cols)
         pk_list = ", ".join(f'"{c}"' for c in pk_columns)
 
+
         # --- Added deduplicate on PK columns before extracting - keeps last record per PK
+        sql_runner = duckdb_conn if duckdb_conn else duckdb
+
         records = (
-            duckdb.sql(f"""
+            sql_runner.sql(f"""
                 SELECT
                 {col_list}       
                 FROM (                
